@@ -5,7 +5,7 @@ int square(int x) {
     return x * x;
 }
 
-int maxValue(int a, int b) {
+int max_value(int a, int b) {
     if (a > b) {
         return a;
     } else {
@@ -17,13 +17,13 @@ int main() {
     int n;
     int a, b;
 
-    cout << "Enter n:" << endl;
+    cout << "Введите n: " << endl;
     cin >> n;
 
-    cout << "Enter a and b:" << endl;
+    cout << "Введите a и b: " << endl;
     cin >> a >> b;
 
-    cout << "Max value: " << maxValue(a, b) << endl;
+    cout << "Максимальное значение: " << max_value(a, b) << endl;
 
     for (int i = 0; i < n; i++) {
         cout << square(i) << endl;

@@ -1,6 +1,6 @@
 def square(x):
     return x * x
-def maxValue(a, b):
+def max_value(a, b):
     if a > b:
         return a
     else:
@@ -9,10 +9,10 @@ if __name__ == '__main__':
     n = None
     a = None
     b = None
-    print("Enter n:")
+    print("Введите n: ")
     n = int(input())
-    print("Enter a and b:")
+    print("Введите a и b: ")
     a, b = map(int, input().split())
-    print("Max value: ", maxValue(a, b))
+    print("Максимальное значение: ", max_value(a, b))
     for i in range(0, n):
         print(square(i))
