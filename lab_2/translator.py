@@ -109,7 +109,6 @@ def translate_cpp_to_python(lines):
     return py_lines, functions, variables
 
 
-# ===== MAIN =====
 if __name__ == "__main__":
     with open("test.cpp", encoding="utf-8") as f:
         cpp_code = f.readlines()
