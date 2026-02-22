@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/syap_labi.iml" filepath="$PROJECT_DIR$/.idea/syap_labi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MPL.iml" filepath="$PROJECT_DIR$/.idea/MPL.iml" />
     </modules>
   </component>
 </project>
