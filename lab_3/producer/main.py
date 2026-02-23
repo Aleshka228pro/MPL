@@ -171,9 +171,9 @@ elif input_method == "Загрузить файл (CSV/JSON)":
             columns_list, data_rows, error = parse_json_file(uploaded_file)
 
         if error:
-            st.error(f"❌ {error}")
+            st.error(f"{error}")
         elif columns_list and data_rows:
-            st.success(f"✅ Загружено: {len(data_rows)} строк")
+            st.success(f"Загружено: {len(data_rows)} строк")
 
             # автозаполнение названия таблицы из имени файла
             if not table_name:
@@ -209,4 +209,5 @@ if st.button("Отправить", type="primary"):
                 }
 
                 if send_to_kafka(message):
+
                     st.success("Отправлено в Kafka!")
