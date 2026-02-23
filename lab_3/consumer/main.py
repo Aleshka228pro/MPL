@@ -2,7 +2,7 @@ import json # работа с JSON данными - парсинг и сериа
 import re # регулярные выражения - валидация названий таблиц и колонок
 from confluent_kafka import Consumer, KafkaException # Consumer - получение сообщений из топика, KafkaException - обработка ошибок брокера
 import psycopg2 # работа с postgreSQL - подключене к БД и выполнение SQL запросов
-from typing import Dict, List, Any # # модуль подсказок типов: Dict (словарь), List (список), Any (любой тип) для описания структур данных
+from typing import Dict, List, Any # модуль подсказок типов: Dict (словарь), List (список), Any (любой тип) для описания структур данных
 
 
 KAFKA_CONFIG = {
@@ -209,3 +209,4 @@ def start_consumer():
 if __name__ == "__main__":
 
     start_consumer()
+
