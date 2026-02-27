@@ -1,0 +1,49 @@
+docker
+http://localhost:8080/
+    Запуск
+        docker-compose up
+    Остановить
+            docker-compose down
+    Перезапуск
+        Остановить всё и удалить осиротевшие контейнеры
+            docker-compose down --remove-orphans
+
+        Удалить старые тома с некорректными путями
+            docker volume rm lab4_pg_data
+            docker volume rm lab4_kafka_data
+
+        Запустить заново
+            docker-compose up -d
+
+        Проверить статус
+            docker-compose ps
+
+        Остановить
+            docker-compose down
+
+
+consumer
+    Запустить
+        python consumer/main.py
+    Остановить
+        CTRL+C
+
+producer
+    Запустить
+        streamlit run producer/main.py
+    Остановить
+        CTRL+C
+
+
+Проверка данных
+    Подключиться к базе
+        docker exec -it lab_postgres psql -U mpl_3 -d db
+
+    Показать таблицы
+        \dt
+
+    Посмотреть данные
+        SELECT * FROM test_users;
+
+    Выйти
+        \q
