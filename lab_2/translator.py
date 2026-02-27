@@ -16,7 +16,7 @@ def translate_cpp_to_python(lines):
         py_lines.append("    " * indent + line)
 
     for line in lines:
-        line = line.strip()
+        line = line.strip() # удаление пустых строк и пробелов
 
         if not line:
             continue
@@ -27,13 +27,13 @@ def translate_cpp_to_python(lines):
         # определение функции
         match = re.match(r'int (\w+)\((.*?)\)\s*\{', line)
         if match:
-            name = match.group(1)
+            name = match.group(1) # поиск совпадения с шаблоном
             args = match.group(2)
 
             functions.add(name)
 
-            args = re.sub(r'int ', '', args)
-            arg_list = [a.strip() for a in args.split(",") if a.strip()]
+            args = re.sub(r'int ', '', args) # замена по шаблону
+            arg_list = [a.strip() for a in args.split(",") if a.strip()] # разбитие по символу
 
             for a in arg_list:
                 variables.add(a)
@@ -48,7 +48,7 @@ def translate_cpp_to_python(lines):
 
         # объявление переменных
         if line.startswith("int "):
-            vars_part = line.replace("int", "").replace(";", "")
+            vars_part = line.replace("int", "").replace(";", "") # замена
             vars_list = [v.strip() for v in vars_part.split(",")]
 
             for v in vars_list:
